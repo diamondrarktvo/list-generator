@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pratique JS</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    body{
+      margin: 10% 35% 10% 35%;
+      background-color: rgb(233 233 233);
+      border: dotted 2px black;
+    }
+    li{
+      list-style-type: georgian;
+      font-family: "Times New Roman";
+    }
+    h1{
+      font-family: "Trebuchet MS";
+      text-align: center;
+    }
+    button{
+      background-color: lime;
+    }
+  </style>
+</head>
+<body>
+    <h1>D-Note</h1>
+    <h3>Sur ce site vous pouvez faire un simple liste</h3>
+
+    <label for="text" id="text">Entrer le mot : </label>
+    <input type="text" name="texte" placeholder="Entrer le mot..."><button>Ajouter</button>
+
+    <ul> </ul>
+
+    <script type="text/javascript">
+        let unorderList = document.querySelector("ul");
+        let champ = document.querySelector("input");
+        let button = document.querySelector("button");
+
+
+            button.onclick = function(){
+            let valeur = champ.value;
+            champ.value = "";
+          
+
+        let list = document.createElement("li");
+        let mot = document.createElement("span");
+        let bouton = document.createElement("button");
+
+        list.appendChild(mot);
+        mot.textContent = valeur;
+        list.appendChild(bouton);
+        bouton.textContent = "Supprimer";
+        unorderList.appendChild(list);
+
+        bouton.onclick = function(chose){
+         unorderList.removeChild(list);
+        }
+
+        input.focus();
+        }
+
+    </script>
+    
+</body>
+</html>
